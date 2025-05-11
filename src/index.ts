@@ -29,7 +29,7 @@ const MONGO_URL = 'mongodb+srv://nodeapi:KsvHv8rayCBNkvwt@cluster0.fk50uto.mongo
 
 mongoose.Promise = Promise;
 mongoose.connect(MONGO_URL);
-mongoose.connection.on('error', (err) => {
+mongoose.connection.on('error', (err: Error) => {
     console.error('MongoDB connection error:', err);
 });
 mongoose.connection.once('open', () => {
